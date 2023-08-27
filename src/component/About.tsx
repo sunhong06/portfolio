@@ -56,12 +56,14 @@ const DetailDiv = styled.div`
   margin-bottom: 150px;
 `;
 const ProfileDiv = styled.div`
-  min-width: 850px;
   width: 850px;
   height: 400px;
   background-color: #fff;
   margin: 0 auto;
   box-shadow: 0px 0px 5px #444;
+  @media screen and (max-width: 1024px) {
+    width: 650px;
+  }
   h2 {
     padding-top: 30px;
     font-size: 40px;
@@ -72,6 +74,9 @@ const InnerDiv = styled.div`
   display: flex;
   margin: 30px 50px;
   align-items: center;
+  @media screen and (max-width: 1024px) {
+    margin: 30px 0;
+  }
   ul {
     width: 400px;
     li {
@@ -130,7 +135,7 @@ const About: React.FC = () => {
         <InnerDiv>
           <PictureDiv>
             <img
-              src={process.env.PUBLIC_URL + 'imgs/김선홍.jpg'}
+              src={process.env.PUBLIC_URL + '/imgs/김선홍.jpg'}
               alt='김선홍'
             />
           </PictureDiv>

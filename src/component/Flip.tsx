@@ -15,11 +15,11 @@ const FlipDiv = styled.div<backToogle>`
   background: #fff;
   height: 300px;
   perspective: 1000px;
-  width: 320px;
+  width: 300px;
   box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.18);
   cursor: pointer;
   position: relative;
-  margin: 40px;
+  margin: 10px;
   transform-style: preserve-3d;
   transition: all ease 1s;
   transform: ${(props) => (props.$back ? 'rotateY(180deg)' : 'rotateY(0deg)')};
@@ -27,11 +27,12 @@ const FlipDiv = styled.div<backToogle>`
 const FrontDiv = styled.div<imgChange>`
   width: 100%;
   height: 100%;
-  background-image: url(imgs/${(props) => props.$image});
+  background-image: url(${process.env.PUBLIC_URL}/imgs/${(props) =>
+  props.$image});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg);s
 `;
 const BackDiv = styled.div`
   position: absolute;

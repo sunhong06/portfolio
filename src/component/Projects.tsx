@@ -7,10 +7,16 @@ const ProjectsDiv = styled.section`
   border-bottom: 2px dashed #999;
 `;
 const ContentDiv = styled.div`
+  width: 1000px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 1300px;
-  margin: 0 auto;
+  place-items: center;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    width: 650px;
+  }
 `;
 const ProjectTitle = styled.h2`
   font-size: 40px;
@@ -36,7 +42,7 @@ const Projects: React.FC = () => {
             ]}
             code='https://github.com/rlatjsghd123/webProject03'
             site='https://rlatjsghd123.github.io/webProject03'
-            image='locknlock.png'
+            image='locknlock.PNG'
           />
           <Flip
             title='Netflix'
@@ -49,7 +55,7 @@ const Projects: React.FC = () => {
             ]}
             code='https://github.com/rlatjsghd123/netflix_app'
             site='https://rlatjsghd123.github.io/netflix_app'
-            image='nexflix.png'
+            image='nexflix.PNG'
           />
           <Flip
             title='LoL_info'
@@ -65,15 +71,15 @@ const Projects: React.FC = () => {
               'Typescript',
             ]}
             work={[
-              'LOL API를 활용한 챔피언정보 소환사정보 전적 랭킹 구현',
-              'firebase를 활용한 게시판 추가 삭제 댓글 추천 기능 구현',
-              'firebase를 활용한 로그인 및 회원가입 기능 구현',
-              '검색기능구현',
+              'LOL API를 활용한 챔피언정보 소환사정보 전적 랭킹',
+              'firebase를 활용한 게시판 추가 삭제 댓글 추천 기능',
+              'firebase를 활용한 로그인 및 회원가입 기능',
+              '검색기능',
               'git-pages배포',
             ]}
             code='https://github.com/rlatjsghd123/lol_info'
             site='https://rlatjsghd123.github.io/lol_info'
-            image='lolinfo.png'
+            image='lolinfo.PNG'
           />
           <Flip
             title='Bus_info'
@@ -87,7 +93,7 @@ const Projects: React.FC = () => {
             ]}
             code='https://github.com/rlatjsghd123/businfo'
             site='http://businfo.duckdns.org'
-            image='bus.png'
+            image='bus.PNG'
           />
           <Flip
             title='Portfolio'
@@ -96,7 +102,7 @@ const Projects: React.FC = () => {
             work={['styled-components활용 ,git-pages배포']}
             code=''
             site=''
-            image='port.png'
+            image='port.PNG'
           />
         </ContentDiv>
       </div>

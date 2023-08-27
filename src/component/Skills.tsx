@@ -15,13 +15,14 @@ const TitleH2 = styled.h2`
 `;
 const InnerSkillsDiv = styled.div`
   ul {
-    width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
     li {
-      min-width: 200px;
-      width: 200px;
+      width: 180px;
       display: flex;
       align-items: center;
       flex-direction: column;
