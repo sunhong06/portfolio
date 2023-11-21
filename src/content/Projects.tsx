@@ -121,10 +121,10 @@ const Projects: React.FC = () => {
             'admin페이지 제작',
             'header,main반응형',
             'css스타일링',
-            'AWS e2 배포',
+            'AWS s3 배포',
           ]}
           code='https://github.com/CS-tudy/CStudy_FrontEnd'
-          site='#'
+          site='https://cstudying.site'
           image='Cstudy.PNG'
         />
       </ContentDiv>
